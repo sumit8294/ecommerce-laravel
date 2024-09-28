@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.month-buttons .active, .year-buttons .active{
+  background-color: green;
+  color: white;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.category-product-row::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.month-buttons::-webkit-scrollbar {
+    width: 12px;    /* for vertical scrollbars */
+    height: 12px;   /* for horizontal scrollbars */
+}
+
+/* Track (background of the scrollbar) */
+.month-buttons::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* Handle (the draggable part) */
+.month-buttons::-webkit-scrollbar-thumb {
+    background-color: rgb(187 247 208 );  /* Scrollbar handle color */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;  /* Adds padding between handle and track */
+}
+
+/* Handle on hover */
+.month-buttons::-webkit-scrollbar-thumb:hover {
+    background-color: green;  /* Darker handle on hover */
+}
+
+.simple-bar-chart{
+    --line-count: 10;
+    --line-color: currentcolor;
+    --line-opacity: 0.25;
+    --item-gap: 2%;
+    --item-default-color: #060606;
+    
+    height: 25rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--item-gap);
+    align-items: end;
+    padding-inline: var(--item-gap);
+    --padding-block: 1.5rem; /*space for labels*/
+    padding-block: var(--padding-block);
+    position: relative;
+    isolation: isolate;
+  }
+  
+  .simple-bar-chart::after{
+    content: "";
+    position: absolute;
+    inset: var(--padding-block) 0;
+    z-index: -1;
+    --line-width: 0px;
+    --line-spacing: calc(100% / var(--line-count));
+    background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
+    box-shadow: 0 var(--line-width) 0 var(--line-color);
+    opacity: var(--line-opacity);
+  }
+  .simple-bar-chart > .item{
+    height: calc(1% * var(--val));
+    background-color: var(--clr, var(--item-default-color));
+    position: relative;
+    animation: item-height 1s ease forwards
+  }
+  @keyframes item-height { from { height: 0 } }
+  
+  .simple-bar-chart > .item > * { position: absolute; text-align: center }
+  .simple-bar-chart > .item > .label { inset: 100% 0 auto 0 }
+  .simple-bar-chart > .item > .value { inset: auto 0 100% 0 }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* demo */
+  /* body { 
+    margin: 0; 
+    padding: 2rem; 
+    color: #1D1E22;
+    background-color: #f0f0f0;
+    font-family: system-ui, sans-serif; 
+    text-align: center;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1D1E22;
+      color: #f0f0f0;
+    }
+  }
+  
+  body > * { max-width: 45rem; margin-inline: auto} */
