@@ -149,7 +149,7 @@
         }
 
         // Automatically scroll at a fixed interval
-        setInterval(autoScroll, 1000); // Adjust the interval for speed
+        // setInterval(autoScroll, 1000); // Adjust the interval for speed
 
 
 
